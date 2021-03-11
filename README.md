@@ -18,4 +18,4 @@ It is highly recommended that a single EP contains a single key proposal or new 
 
 ## Acknowledgements 
 
-Enhancement proposals are common in the Python ecosystem. This repo borrowed heavily from https://github.com/sktime/enhancement-proposals.
+Enhancement proposals are common in the Python ecosystem. This repo borrowed heavily from https://github.com/sktime/enhancement-proposals. It also borrowed from RFC repos such as https://github.com/yarnpkg/rfcs.
