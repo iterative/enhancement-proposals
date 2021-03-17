@@ -6,15 +6,20 @@ This repository is for structured discussions about large modifications or addit
 
 ## Description
 
-An enhancement proposal (EP) is a design document providing information to the community, or describing a new feature. The proposal should provide a concise technical specification of the feature and a rationale for adopting it.
+An enhancement proposal is a design document providing information to the community, or describing a new feature. The proposal should provide a concise technical specification of the feature and a rationale for adopting it.
 
-We intend EPs to be the primary mechanisms for proposing major changes, for collecting community input on an issue, and for documenting the design decisions that have gone into Iterative projects. Smaller changes can be discussed and implemented directly on the main repositories.
+We intend proposals to be the primary mechanisms for proposing major changes, for collecting community input on an issue, and for documenting the design decisions that have gone into Iterative projects. Smaller changes can be discussed and implemented directly on the main repositories.
 
-## Submitting an EP
+## Submitting a proposal
 
-To create a new EP, please copy and use TEMPLATE.md and open a pull request on this repository.
+To create a new proposal, please:
 
-It is highly recommended that a single EP contains a single key proposal or new idea. The more focused the proposal, the more successful it tends to be. If in doubt, split your EP into several well-focused ones.
+1. Copy and TEMPLATE.md into the proposals folder.
+2. Rename the file to something descriptive of the proposal.
+3. Draft the proposal, using the template structure.
+4. Open a pull request on this repository.
+
+It is highly recommended that a single proposal contains a single key proposal or new idea. The more focused the proposal, the more successful it tends to be. If in doubt, split your proposal into several well-focused ones.
 
 ## Acknowledgements 
 
