@@ -5,8 +5,8 @@
 
 The `dvc exp show` command shows a comparison of the results of different
 experiments along with the parameters and metrics values for each experiment.
-The output currently includes all values that are defined in `params.yaml` or
-any other referenced parameters files in any DVC stage. Output also includes all
+The command's output currently includes all values that are defined in `params.yaml` or
+any other referenced parameters files in any DVC stage. It also includes all
 metrics in any referenced metrics files in any DVC stage. This proposal allows
 users to see only parameters and metrics relevant to specified pipeline stages.
 
