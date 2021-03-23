@@ -1,3 +1,5 @@
+# Title: (provide a descriptive title)
+
 - Enhancement Proposal PR: (leave this empty)
 - Contributors: (list of contributors' GitHub handles)
 
