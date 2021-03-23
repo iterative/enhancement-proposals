@@ -1,3 +1,5 @@
+# Add targets/stages argument to dvc exp show
+
 - Enhancement Proposal PR: (leave this empty)
 - Contributors: dberenbaum, (add your Github handle)
 
@@ -5,10 +7,12 @@
 
 The `dvc exp show` command shows a comparison of the results of different
 experiments along with the parameters and metrics values for each experiment.
-The command's output currently includes all values that are defined in `params.yaml` or
-any other referenced parameters files in any DVC stage. It also includes all
-metrics in any referenced metrics files in any DVC stage. This proposal allows
-users to see only parameters and metrics relevant to specified pipeline stages.
+The command's output currently includes:
+* All values that are defined in `params.yaml`.
+* All values in other referenced parameters files in any DVC stage.
+* All values in any referenced metrics files in any DVC stage.
+This proposal allows users to see only parameters and metrics relevant to
+specified pipeline stages.
 
 See https://github.com/iterative/dvc/issues/5451 for more background.
 
