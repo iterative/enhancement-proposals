@@ -14,12 +14,12 @@ We intend proposals to be the primary mechanisms for proposing major changes, fo
 
 To create a new proposal, please:
 
-1. Copy and TEMPLATE.md into the proposals folder.
+1. Copy TEMPLATE.md into the proposals folder.
 2. Rename the file to something descriptive of the proposal.
 3. Draft the proposal, using the template structure.
 4. Open a pull request on this repository.
 
-It is highly recommended that a single proposal contains a single key proposal or new idea. The more focused the proposal, the more successful it tends to be. If in doubt, split your proposal into several well-focused ones.
+It is highly recommended that each proposal contains a single key proposal or new idea. The more focused the proposal, the more successful it tends to be. If in doubt, split your proposal into several well-scoped ones.
 
 ## Acknowledgements 
 
