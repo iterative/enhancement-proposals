@@ -11,6 +11,7 @@ The command's output currently includes:
 * All values that are defined in `params.yaml`.
 * All values in other referenced parameters files in any DVC stage.
 * All values in any referenced metrics files in any DVC stage.
+
 This proposal allows users to see only parameters and metrics relevant to
 specified pipeline stages.
 
