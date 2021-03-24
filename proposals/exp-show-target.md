@@ -185,13 +185,15 @@ There are many alternative methods to refine the output of `dvc exp show`:
 * Current functionality: `exp show` already has options to include/exclude any
   column, so the flexibility to get the same output as suggested here already
   exists.
-* Expand the include/exclude options to accept wildcard/glob/regex arguments for
-  more flexibility to exclude an entire file or section of a file like
+* [Wildcards](https://github.com/iterative/dvc/issues/5642): Expand the
+  include/exclude options to accept wildcard/glob/regex arguments for more
+  flexibility to exclude an entire file or section of a file like
   `exclude-params=params.json:local_config*`.
 * Save configuration options for `dvc exp show` so they can be reused and
   modified without typing out all options at the command line each time.
-* Add a tsv/csv output format option in `dvc exp show` to enable users to
-  manipulate the table with other tools.
+* [CSV](https://github.com/iterative/dvc/issues/5446): Add a tsv/csv output
+  format option in `dvc exp show` to enable users to manipulate the table with
+  other tools.
 
 This proposal does not preclude any of these options. The current output
 will continue to be available except for untracked parameters. The other
