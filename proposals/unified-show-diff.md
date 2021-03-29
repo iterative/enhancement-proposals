@@ -5,12 +5,12 @@
 
 # Summary
 
-Establish a unified command to `show` or `diff` all outputs of specified types,
-including:
+Establish a unified command to combine and `show` or `diff` all outputs of
+specified types, including:
 
 * Metrics
 * Plots
-* Images
+* Images (depends on https://github.com/iterative/dvc/discussions/5681)
 
 These would all be put under a single `dvc outputs show/diff` command.
 
