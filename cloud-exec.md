@@ -5,9 +5,12 @@
 
 # Summary
 
-Users need to run ML experiments in cloud instances or remote machines.
-DVC should support this out of the box to improve user experience and remove
-  the overhead of instrumenting these scenarios.
+Users need to run ML experiments in cloud instances or remote machines when
+user does not have enough resources in a local machine or a bgger scale is
+required for ML training (5 GPU instances running differnet experiments).
+
+The cloud execution should be supported in DVC experiments level when all
+the training results are presented in a single experiments table.
 
 # Motivation
 
@@ -111,6 +114,15 @@ Instance configuration is well developed in CML project and can be reused.
 
 ## Executors and naming
 
+Ideally, a user should be able to define or overwrite executors in config
+(`dvc.yml` or `.dvc/config`). `dvc exp run` should execute,
+provision/terminate if needed.
+
+The executor definition (`p3.large` AWS instance in `us-west` with `abcdef`
+volume attached) should be decoupled from pipeline definition the same way
+as remotes are: stage `train` runs on `my-gpu-tesla`, not executor
+definition with `p3.large`.
+
 Many instance types and even clouds could be used in a single DVC project.
 We need a way of configuring **executors** and reusing them the same way
   as user can configure a data remote.
@@ -123,6 +135,19 @@ $ dvc exp run --executor my-gpu-tesla8
 $ dvc exp run --executor tesla8-ram
 ```
 
+## Queue of executors
+
+Queue of executors (like 4 `p3.large` "hot" instances with shared volume)
+seems like a very common case and should be natively supported. It should
+look like a singele unit (`my-gpu-tesla-hotpool`) from pipeline point of
+view.
+
+## Queue of experiments
+
+Executing experiments is a slow and expensive operation and might need more
+granular management on the experiment level: create, remove, list, etc.
+See here: https://github.com/iterative/dvc/issues/5615
+
 # How We Teach This
 
 We need to introduce a concept **Executor** to DVC.
@@ -133,13 +158,17 @@ execution for the users who'd like to use this feature.
 
 # Drawbacks
 
-This feature opens new user scenarios which increase the complexity of DVC,
-it will require new sections in the docs, etc.
-It might be beneficial to extract as much of this functionality as possible to
-external products and tools (terraform providers for example). 
+First, this feature opens new user scenarios which increase the complexity
+of DVC, it will require new sections in the docs, etc. However, it seems
+like the only way of implementing remote execution if the DVC experements
+table is used as a common leddger of ML runs.
 
-More people might confuse DVC with data engineerings pipeline execution tools
-such as AirFlow, Dagster and others.
+It might be beneficial to extract as much of this functionality as possible
+to external products and tools (terraform providers for example) to
+simplify DVC.
+
+Second, more people might confuse DVC with data engineerings pipeline
+execution tools such as AirFlow, Dagster and others.
 We should provide a clear guideline when DVC should be used for workflow
 execution and when it should not.
 
